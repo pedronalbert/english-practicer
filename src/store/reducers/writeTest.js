@@ -16,21 +16,19 @@ const initState = {
 };
 
 const reducer = typeToReducer({
-  [START_TEST]: (state, { payload: { mode, words, selectedWords }}) => ({
-    ...initState,
-    mode,
-    words,
-    selectedWords,
+  [START_TEST]: (_, { payload: { mode, words, selectedWords }}) => update(initState, {
+    mode: { $set: mode },
+    words: { $set: words },
+    selectedWords: { $set: selectedWords },
   }),
 
-  [SUBMIT_ANSWER]: (state, { payload: { valid, mode, answer, word }}) => update(state, {
+  [SUBMIT_ANSWER]: (state, { payload: { valid, answer, word }}) => update(state, {
     lastAnswer: { $set: { valid, answer, word }},
     answers: { $push: [{ valid, word, answer }] },
   }),
 
-  [NEXT_WORD]: (state) => ({
-    ...state,
-    currentWordIndex: state.currentWordIndex + 1,
+  [NEXT_WORD]: (state) => update(state, {
+    currentWordIndex: { $apply: index => index + 1 },
   }),
 }, initState);
 
