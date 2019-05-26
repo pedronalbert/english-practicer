@@ -1,28 +1,27 @@
 import compact from 'lodash/compact';
-import isArray from 'lodash/isArray';
 import clear from 'clear';
 import scanf from 'scanf';
 import inquirer from 'inquirer';
 import colors from 'colors';
 
 import store from './store';
-
-import { start, submitAnswer, nextWord } from './actions/writeTestActions';
-
+import { init as mainMenu } from './cli';
+import { stringifyWord } from './utils';
+import { start, submitAnswer, nextWord, saveToForgottenRepo } from './actions/writeTestActions';
 import { translateModeSelect } from './selects';
-import { FOREIGN_TO_NATIVE, NATIVE_TO_FOREIGN } from './constants';
+import { FOREIGN_TO_NATIVE } from './constants';
 
 const REPEAT_WRONG_WORDS = 'Repetir preguntas donde me he equivocado';
 const REPEAT_CURRENT_TEST = 'Repetir test (actual)'
 const REPEAT_WHOLE_TEST = 'Repetir test (completo)';
 const CHANGE_TEST_MODE = 'Cambiar idioma';
+const SAVE_TO_REPO = 'Guardar palabras en repo (olvidadas)';
+const MAIN_MENU = 'Ir al menu principal';
 
 const getQuestion = (word, mode) => word[mode === FOREIGN_TO_NATIVE ? 'foreign' : 'native'];
 
-const getPrintableWord = word => isArray(word) ? word.join(', ') : word;
-
 const printQuestion = ({ question, ipa }) =>
-  console.log(`${getPrintableWord(question) } ${colors.grey(ipa)}`)
+  console.log(`${stringifyWord(question) } ${colors.grey(ipa)}`)
 
 const getAnswer = () => scanf('%S');
 
@@ -39,10 +38,10 @@ const printPreviousResult = ({ valid, word, answer }) => {
 
 const printFullWord = word => console.log(
   colors.grey.underline('Ingles:'),
-  getPrintableWord(word.foreign),
+  stringifyWord(word.foreign),
   colors.grey(word.ipa),
   colors.grey.underline('Español:'),
-  getPrintableWord(word.native)
+  stringifyWord(word.native)
 );
 
 const printWrongWords = words => {
@@ -60,7 +59,9 @@ const endMenu = ({ hasWrongWords }) => new Promise((resolve) => {
         hasWrongWords && REPEAT_WRONG_WORDS,
         REPEAT_CURRENT_TEST,
         REPEAT_WHOLE_TEST,
-        CHANGE_TEST_MODE
+        CHANGE_TEST_MODE,
+        hasWrongWords && SAVE_TO_REPO,
+        MAIN_MENU,
       ])
     }
   ]).then(({ answer }) => resolve(answer));
@@ -76,6 +77,7 @@ const getCurrentState = () => {
 
   return {
     mode,
+    repo: state.repo,
     words: state.words,
     hasNext: state.currentWordIndex < (state.selectedWords.length - 1),
     currentWordIndex: state.currentWordIndex,
@@ -144,6 +146,7 @@ const renderEnding = () => {
     currentWordIndex,
     selectedWords,
     mode,
+    repo,
   } = getCurrentState();
 
   const wrongAnswers = answers.filter(({ valid }) => !valid);
@@ -184,15 +187,20 @@ const renderEnding = () => {
 
               return renderQuestion()
             });
+        case SAVE_TO_REPO:
+          saveToForgottenRepo({ words: wrongWords, repo });
 
+          return renderEnding();
+        case MAIN_MENU:
+          return mainMenu()
         default:
           resolve();
       }
     });
 };
 
-export default (selectedWords, mode, words) => {
-  store.dispatch(start({ words, mode, selectedWords }));
+export default (selectedWords, mode, words, repo) => {
+  store.dispatch(start({ words, mode, selectedWords, repo }));
 
   renderQuestion();
 };

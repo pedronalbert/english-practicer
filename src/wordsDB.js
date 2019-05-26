@@ -51,22 +51,25 @@ const getWordsFromCSVContent = CSVContent => new Promise((resolve, reject) => {
 
 /**
  * 
- * @param {String} name Repo name
+ * @param {Array} words
+ * @param {Strings} filePath
  */
-const getRepoByName = name => new Promise((resolve, reject) => {
-  getRepos()
-    .then(repos => repos.find(({ name: cName }) => cName === name))
-    .then(repo => repo ? resolve(repo) : reject(`Repo ${name} not found`));
-});
+export const saveWords = (words, filePath) => {
+  const stringContent = words.reduce(
+    (content, { foreign, ipa, native }) => content + [foreign, ipa, native].join(',') + '\n',
+    '',
+  );
+
+  fs.appendFile(filePath, stringContent, () => true);
+};
 
 /**
  * 
- * @param {String} name Repo name
+ * @param {Object} repo
+ * @param {String} repo.file
  */
-export const getWords = name => new Promise((resolve, reject) => {
-  getRepoByName(name)
-    .then(({ file }) => getCSVContent(file))
-    .then(getWordsFromCSVContent)
+export const getWords = repo => new Promise((resolve, reject) => {
+  getWordsFromCSVContent(getCSVContent(repo.file))
     .then(parseWordsArray)
     .then(resolve)
     .catch(reject);
@@ -75,4 +78,5 @@ export const getWords = name => new Promise((resolve, reject) => {
 export default {
   getWords,
   getRepos,
+  saveWords,
 };

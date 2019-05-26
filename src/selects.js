@@ -46,5 +46,5 @@ export const repoSelect = repos => new Promise((resolve, reject) => {
 
   inquirer.prompt([
     { name: 'repo', type: 'list', message: 'Seleccione un repositorio', choices: options },
-  ]).then(({ repo }) => resolve(repo));
+  ]).then(({ repo }) => resolve(repos.find(({ name }) => name === repo)));
 });

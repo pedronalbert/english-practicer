@@ -9,6 +9,7 @@ import {
 
 const initState = {
   mode: null,
+  repo: null,
   words: [],
   selectedWords: [],
   answers: [],
@@ -16,8 +17,9 @@ const initState = {
 };
 
 const reducer = typeToReducer({
-  [START_TEST]: (_, { payload: { mode, words, selectedWords }}) => update(initState, {
+  [START_TEST]: (_, { payload: { mode, repo, words, selectedWords }}) => update(initState, {
     mode: { $set: mode },
+    repo: { $set: repo },
     words: { $set: words },
     selectedWords: { $set: selectedWords },
   }),
