@@ -8,5 +8,6 @@ export const TRANSLATE_MODES = [
 
 export const REPOS = [
   { name: 'Sustantivos', file: 'sustantives.csv' },
+  { name: 'Verbs', file: 'verbs.csv' },
   { name: 'Adjetivos', file: 'adjectives.csv' },
 ];
