@@ -6,8 +6,4 @@ export const TRANSLATE_MODES = [
   { value: NATIVE_TO_FOREIGN, text: 'español -> inges' },
 ];
 
-export const REPOS = [
-  { name: 'Sustantivos', file: 'sustantives.csv' },
-  { name: 'Verbs', file: 'verbs.csv' },
-  { name: 'Adjetivos', file: 'adjectives.csv' },
-];
+export const REPOS_FOLDER = 'data';

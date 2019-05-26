@@ -3,7 +3,8 @@ import writeTest from './writeTest';
 import { repoSelect, wordsSelect, translateModeSelect } from './selects';
 
 const init = () => {
-  repoSelect(wordsDB.getRepos())
+  wordsDB.getRepos()
+    .then(repoSelect)
     .then(wordsDB.getWords)
     .then(wordsSelect)
     .then(words => Promise.all([words, translateModeSelect()]))

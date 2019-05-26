@@ -1,8 +1,22 @@
 import fs from 'fs';
 import CSVParse from 'csv-parse';
 import path from 'path';
+import capitalize from 'lodash/capitalize';
 
-import { REPOS } from './constants';
+import { REPOS_FOLDER } from './constants';
+
+export const getRepos = () => new Promise((resolve) => {
+  fs.readdir(REPOS_FOLDER, (error, files) => {
+    if(error) return reject(`Can't load repositories from ./${REPOS_FOLDER}`);
+
+    resolve(files.map(
+      file => ({
+        name: capitalize(file.replace('.csv', '')),
+        file: path.join(REPOS_FOLDER, file) 
+      }),
+    ));
+  });
+});
 
 /**
  * 
@@ -40,11 +54,9 @@ const getWordsFromCSVContent = CSVContent => new Promise((resolve, reject) => {
  * @param {String} name Repo name
  */
 const getRepoByName = name => new Promise((resolve, reject) => {
-
-  const repo = REPOS.find(({ name: cName }) => cName === name);
-
-  if(repo) resolve(repo);
-  else reject(`Repo ${name} not found`);
+  getRepos()
+    .then(repos => find(({ name: cName }) => cName === name))
+    .then(repo => repo ? resolve(repo) : reject(`Repo ${name} not found`));
 });
 
 /**
@@ -59,8 +71,6 @@ export const getWords = name => new Promise((resolve, reject) => {
     .then(resolve)
     .catch(reject);
 });
-
-export const getRepos = () => REPOS;
 
 export default {
   getWords,
