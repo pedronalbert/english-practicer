@@ -55,7 +55,7 @@ const getWordsFromCSVContent = CSVContent => new Promise((resolve, reject) => {
  */
 const getRepoByName = name => new Promise((resolve, reject) => {
   getRepos()
-    .then(repos => find(({ name: cName }) => cName === name))
+    .then(repos => repos.find(({ name: cName }) => cName === name))
     .then(repo => repo ? resolve(repo) : reject(`Repo ${name} not found`));
 });
 
@@ -65,7 +65,7 @@ const getRepoByName = name => new Promise((resolve, reject) => {
  */
 export const getWords = name => new Promise((resolve, reject) => {
   getRepoByName(name)
-    .then(({ file }) => getCSVContent(path.join(__dirname, `../data/${file}`)))
+    .then(({ file }) => getCSVContent(file))
     .then(getWordsFromCSVContent)
     .then(parseWordsArray)
     .then(resolve)
