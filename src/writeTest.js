@@ -7,7 +7,7 @@ import colors from 'colors';
 
 import store from './store';
 
-import { start, submitAnswer, nextWord, getValidAnswer } from './actions/writeTestActions';
+import { start, submitAnswer, nextWord } from './actions/writeTestActions';
 
 import { translateModeSelect } from './selects';
 import { FOREIGN_TO_NATIVE, NATIVE_TO_FOREIGN } from './constants';
@@ -28,16 +28,12 @@ const getAnswer = () => scanf('%S');
 const printProgress = ({ correct, wrong, current, total }) =>
   console.log(`Progreso: ${current}/${total}, Correctas: ${colors.green(correct)}, Incorrectas: ${colors.red(wrong)}\n`)
 
-const printPreviousResult = ({ valid, validAnswer, word, answer }, mode) => {
-  if(valid) {
-    console.log(colors.green('Respuesta Correcta!'));
-    printFullWord(word);
-    console.log('\n');
-
-  } else {
-    console.log(colors.red('Respuesta Incorrecta: '));
-    console.log('<Correcto> ' + colors.green(getPrintableWord(validAnswer)) + ' | ' + colors.red(answer || '') + ' <Ingresado> \n');
-  }
+const printPreviousResult = ({ valid, word, answer }) => {
+  if(valid) console.log(colors.green('Resputa Correcta! \n'));
+  else console.log(colors.red(`Respuesta Incorrecta! [${answer || ''}]\n`));
+ 
+  printFullWord(word);
+  console.log('\n');
 };
 
 const printFullWord = word => console.log(
@@ -83,7 +79,6 @@ const getCurrentState = () => {
     lastAnswer: lastAnswer ? {
       ...lastAnswer,
       question: getQuestion(lastAnswer.word, mode),
-      validAnswer: getValidAnswer(lastAnswer.word, mode),
     } : null,
     answers,
     counter: {
