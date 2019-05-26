@@ -13,7 +13,8 @@ import { translateModeSelect } from './selects';
 import { FOREIGN_TO_NATIVE, NATIVE_TO_FOREIGN } from './constants';
 
 const REPEAT_WRONG_WORDS = 'Repetir preguntas donde me he equivocado';
-const REPEAT_WHOLE_TEST = 'Repetir test nuevamente';
+const REPEAT_CURRENT_TEST = 'Repetir test (actual)'
+const REPEAT_WHOLE_TEST = 'Repetir test (completo)';
 const CHANGE_TEST_MODE = 'Cambiar idioma';
 
 const getQuestion = (word, mode) => word[mode === FOREIGN_TO_NATIVE ? 'foreign' : 'native'];
@@ -55,7 +56,12 @@ const endMenu = ({ hasWrongWords }) => new Promise((resolve) => {
     {
       name: 'answer',
       type: 'list',
-      choices: compact([hasWrongWords && REPEAT_WRONG_WORDS, REPEAT_WHOLE_TEST, CHANGE_TEST_MODE])
+      choices: compact([
+        hasWrongWords && REPEAT_WRONG_WORDS,
+        REPEAT_CURRENT_TEST,
+        REPEAT_WHOLE_TEST,
+        CHANGE_TEST_MODE
+      ])
     }
   ]).then(({ answer }) => resolve(answer));
 });
@@ -163,8 +169,12 @@ const renderEnding = () => {
           store.dispatch(start({ words, mode, selectedWords: [...wrongWords] }))
 
           return renderQuestion();
+        case REPEAT_CURRENT_TEST:
+          store.dispatch(start({ words, mode, selectedWords }))
+
+          return renderQuestion();
         case REPEAT_WHOLE_TEST:
-          store.dispatch(start({ words, mode, selectedWords: words }));
+          store.dispatch(start({ words, mode, selectedWords }));
 
           return renderQuestion();
         case CHANGE_TEST_MODE:
