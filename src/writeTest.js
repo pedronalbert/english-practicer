@@ -169,21 +169,21 @@ const renderEnding = () => {
     .then(answer => {
       switch (answer) {
         case REPEAT_WRONG_WORDS:
-          store.dispatch(start({ words, mode, selectedWords: [...wrongWords] }))
+          store.dispatch(start({ words, mode, selectedWords: [...wrongWords], repo }))
 
           return renderQuestion();
         case REPEAT_CURRENT_TEST:
-          store.dispatch(start({ words, mode, selectedWords }))
+          store.dispatch(start({ words, mode, selectedWords, repo }))
 
           return renderQuestion();
         case REPEAT_WHOLE_TEST:
-          store.dispatch(start({ words, mode, selectedWords }));
+          store.dispatch(start({ words, mode, selectedWords, repo }));
 
           return renderQuestion();
         case CHANGE_TEST_MODE:
           return translateModeSelect()
             .then(newMode => {
-              store.dispatch(start({ words, mode: newMode, selectedWords: words }));
+              store.dispatch(start({ words, mode: newMode, selectedWords: words, repo }));
 
               return renderQuestion()
             });
