@@ -1,12 +1,13 @@
-export const ENGLISH_TO_SPANISH = 'ENGLISH_TO_SPANISH';
-export const SPANISH_TO_ENGLISH = 'SPANISH_TO_ENGLISH';
+export const FOREIGN_TO_NATIVE = 'FOREIGN_TO_NATIVE';
+export const NATIVE_TO_FOREIGN = 'NATIVE_TO_FOREIGN';
 
 export const TRANSLATE_MODES = [
-  { value: ENGLISH_TO_SPANISH, text: 'inges -> español' },
-  { value: SPANISH_TO_ENGLISH, text: 'español -> inges' },
+  { value: FOREIGN_TO_NATIVE, text: 'inges -> español' },
+  { value: NATIVE_TO_FOREIGN, text: 'español -> inges' },
 ];
 
 export const REPOS = [
   { name: 'Sustantivos', file: 'sustantives.csv' },
+  { name: 'Verbs', file: 'verbs.csv' },
   { name: 'Adjetivos', file: 'adjectives.csv' },
 ];

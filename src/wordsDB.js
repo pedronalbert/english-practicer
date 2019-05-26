@@ -14,10 +14,10 @@ const getCSVContent = path => fs.readFileSync(path).toString();
  * 
  * @param {Array} wordsArray Array of words from CSV content
  */
-const parseWordsArray = wordsArray => wordsArray.map(entry => ({
-  english: entry[0],
-  ipa: entry[1],
-  spanish: entry[2],
+const parseWordsArray = wordsArray => wordsArray.map(([foreign, ipa, native]) => ({
+  foreign: foreign.includes('|') ? foreign.split('|') : foreign,
+  ipa,
+  native: native.includes('|') ? native.split('|') : native,
 }));
 
 

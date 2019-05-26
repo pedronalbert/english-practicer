@@ -8,7 +8,6 @@ const init = () => {
     .then(wordsSelect)
     .then(words => Promise.all([words, translateModeSelect()]))
     .then(([words, mode]) => writeTest(words, mode, words))
-    .then(() => init())
     .catch(console.error);
 };
 
