@@ -1,76 +1,144 @@
-import shuffle from 'lodash/shuffle';
+import compact from 'lodash/compact';
+import isArray from 'lodash/isArray';
 import clear from 'clear';
 import scanf from 'scanf';
 import inquirer from 'inquirer';
 import colors from 'colors';
 
+import store from './store';
+
+import { start, submitAnswer, nextWord } from './actions/writeTestActions';
+
 import { translateModeSelect } from './selects';
-import { ENGLISH_TO_SPANISH } from './constants';
+import { FOREIGN_TO_NATIVE, NATIVE_TO_FOREIGN } from './constants';
 
 const REPEAT_WRONG_WORDS = 'Repetir preguntas donde me he equivocado';
 const REPEAT_WHOLE_TEST = 'Repetir test nuevamente';
 const CHANGE_TEST_MODE = 'Cambiar idioma';
-const MAIN_MENU = 'Ir al menu principal';
 
-const shuffleWords = words => shuffle(words);
+const getQuestion = (word, mode) => word[mode === FOREIGN_TO_NATIVE ? 'foreign' : 'native'];
 
-const printQuestion = (word, mode) => 
-  console.log(mode === ENGLISH_TO_SPANISH ? `${word.english} ${colors.grey(word.ipa)}` : `${word.spanish}`);
+const getPrintableWord = word => isArray(word) ? word.join(', ') : word;
 
-const getAnswer = () => scanf('%s');
+const printQuestion = ({ question, ipa }) =>
+  console.log(`${getPrintableWord(question) } ${colors.grey(ipa)}`)
 
-const validateAnswer = (word, mode, answer) =>
-  answer === (mode === ENGLISH_TO_SPANISH ? word.spanish : word.english);
+const getAnswer = () => scanf('%S');
 
 const printProgress = ({ correct, wrong, current, total }) =>
   console.log(`Progreso: ${current}/${total}, Correctas: ${colors.green(correct)}, Incorrectas: ${colors.red(wrong)}\n`)
 
-const printPreviousResult = ({ valid, word, answer }, mode) => {
-  if(valid) {
-    console.log(colors.green('Respuesta Correcta!\n'));
-    console.log(colors.grey(word.ipa));
-  } else {
-    console.log(colors.red('Respuesta Incorrecta: '));
-    console.log('<Correcto> ' + colors.green(mode === ENGLISH_TO_SPANISH ? word.spanish : word.english) + ' | ' + colors.red(answer) + ' <Ingresado> \n');
-  }
+const printPreviousResult = ({ valid, word, answer }) => {
+  if(valid) console.log(colors.green('Resputa Correcta! \n'));
+  else console.log(colors.red(`Respuesta Incorrecta! [${answer || ''}]\n`));
+ 
+  printFullWord(word);
+  console.log('\n');
 };
 
-const printWrongWords = words => console.log(`Lista de palabras incorrectas\n
-${words.map(word => `Ingles: ${word.english} ${word.ipa}, Español: ${word.spanish}`).join('\n')}
-`);
+const printFullWord = word => console.log(
+  colors.grey.underline('Ingles:'),
+  getPrintableWord(word.foreign),
+  colors.grey(word.ipa),
+  colors.grey.underline('Español:'),
+  getPrintableWord(word.native)
+);
 
-const endMenu = () => new Promise((resolve) => {
+const printWrongWords = words => {
+  console.log(`Lista de palabras incorrectas \n`);
+
+  words.forEach(printFullWord);
+};
+
+const endMenu = ({ hasWrongWords }) => new Promise((resolve) => {
   inquirer.prompt([
     {
       name: 'answer',
       type: 'list',
-      choices: [REPEAT_WRONG_WORDS, REPEAT_WHOLE_TEST, CHANGE_TEST_MODE, MAIN_MENU],
+      choices: compact([hasWrongWords && REPEAT_WRONG_WORDS, REPEAT_WHOLE_TEST, CHANGE_TEST_MODE])
     }
   ]).then(({ answer }) => resolve(answer));
 });
 
-const init = (words, mode, allWords) => new Promise((resolve) => {
-  let answers = [];
-  let counter = { correct: 0, wrong: 0 };
+const getCurrentState = () => {
+  const { writeTest: state } = store.getState();
 
-  shuffleWords(words).forEach((word, index) => {
-    clear();
-    printProgress({ ...counter, current: index + 1, total: words.length });
+  const mode = state.mode;
+  const currentWord = state.selectedWords[state.currentWordIndex];
+  const answers = state.answers;
+  const lastAnswer = answers.length > 0 ? answers[answers.length - 1] : null;
 
-    if(answers.length) printPreviousResult(answers[answers.length - 1], mode);
+  return {
+    mode,
+    words: state.words,
+    hasNext: state.currentWordIndex < (state.selectedWords.length - 1),
+    currentWordIndex: state.currentWordIndex,
+    currentWord,
+    currentQuestion: getQuestion(currentWord, mode),
+    selectedWords: state.selectedWords,
+    lastAnswer: lastAnswer ? {
+      ...lastAnswer,
+      question: getQuestion(lastAnswer.word, mode),
+    } : null,
+    answers,
+    counter: {
+      correct: answers.filter(({ valid }) => valid).length,
+      wrong: answers.filter(({ valid }) => !valid).length,
+    },
+  };
+};
 
-    printQuestion(word, mode);
-
-    const answer = getAnswer();
-    const valid = validateAnswer(word, mode, answer);
-
-    if(valid) counter.correct++
-    else counter.wring++
-
-    answers.push({ valid, word, answer });
-  });
+const renderQuestion = () => new Promise((resolve) => {
+  const {
+    counter,
+    lastAnswer,
+    currentWordIndex,
+    currentWord,
+    currentQuestion,
+    selectedWords,
+    mode,
+    hasNext,
+  } = getCurrentState();
 
   clear();
+  printProgress({
+    ...counter,
+    current: currentWordIndex,
+    total: selectedWords.length
+  });
+
+  if(lastAnswer) printPreviousResult(lastAnswer, mode);
+
+  printQuestion({ question: currentQuestion, ipa: mode === FOREIGN_TO_NATIVE ? currentWord.ipa : '' });
+
+  const answer = getAnswer();
+
+  store.dispatch(submitAnswer({
+    word: currentWord,
+    answer,
+    mode,
+  }));
+
+  if(hasNext) {
+    store.dispatch(nextWord());
+
+    return renderQuestion();
+  } else {
+    clear();
+
+    return renderEnding();
+  }
+});
+
+const renderEnding = () => {
+  const {
+    answers,
+    words,
+    counter,
+    currentWordIndex,
+    selectedWords,
+    mode,
+  } = getCurrentState();
 
   const wrongAnswers = answers.filter(({ valid }) => !valid);
   const wrongWords = wrongAnswers.map(({ word }) => word);
@@ -82,23 +150,39 @@ const init = (words, mode, allWords) => new Promise((resolve) => {
     scanf('%d')
   }
 
-  printProgress({ ...counter, current: words.length, total: words.length });
+  printProgress({
+    ...counter,
+    current: currentWordIndex,
+    total: selectedWords.length
+  });
 
-  endMenu()
+  endMenu({ hasWrongWords: wrongWords.length > 0 })
     .then(answer => {
       switch (answer) {
         case REPEAT_WRONG_WORDS:
-          return init(wrongWords, mode, allWords);
+          store.dispatch(start({ words, mode, selectedWords: [...wrongWords] }))
+
+          return renderQuestion();
         case REPEAT_WHOLE_TEST:
-          return init(allWords, mode, allWords);
+          store.dispatch(start({ words, mode, selectedWords: words }));
+
+          return renderQuestion();
         case CHANGE_TEST_MODE:
           return translateModeSelect()
-            .then(newMode => init(allWords, newMode, allWords))
+            .then(newMode => {
+              store.dispatch(start({ words, mode: newMode, selectedWords: words }));
+
+              return renderQuestion()
+            });
+
         default:
           resolve();
       }
     });
+};
 
-});
+export default (selectedWords, mode, words) => {
+  store.dispatch(start({ words, mode, selectedWords }));
 
-export default init;
+  renderQuestion();
+};
