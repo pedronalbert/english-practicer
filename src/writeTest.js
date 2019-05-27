@@ -177,7 +177,7 @@ const renderEnding = () => {
 
           return renderQuestion();
         case REPEAT_WHOLE_TEST:
-          store.dispatch(start({ words, mode, selectedWords, repo }));
+          store.dispatch(start({ words, mode, selectedWords: words, repo }));
 
           return renderQuestion();
         case CHANGE_TEST_MODE:

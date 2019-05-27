@@ -12,7 +12,6 @@ escort,esˈkɔːrt,escolta
 hue,/hjuː/,matíz
 desire,/dɪˈzaɪr/,deseo
 boyhood,/ˈbɔɪ.hʊd/,niñez
-bog,/boːɡ/,pantano
 hut,/hʌt/,choza
 foal,/foʊl/,potro
 pond,/pɑːnd/,estanque
@@ -145,7 +144,7 @@ gristle,/ˈɡrɪs.əl/,cartílago
 barn,/bɑːrn/,granero
 seal,/siːl/,sello
 gloom,/ɡluːm/,penumbra
-swamp,/swɑːmp/,pantano
+swamp|bog,/swɑːmp/|/boːɡ/,pantano
 chaff,/tʃæf/,paja
 shed,/ʃed/,cobertizo
 wealth,/welθ/,riqueza

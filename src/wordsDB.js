@@ -2,6 +2,7 @@ import fs from 'fs';
 import CSVParse from 'csv-parse';
 import path from 'path';
 import capitalize from 'lodash/capitalize';
+import isArray from 'lodash/isArray';
 
 import { REPOS_FOLDER } from './constants';
 
@@ -49,6 +50,8 @@ const getWordsFromCSVContent = CSVContent => new Promise((resolve, reject) => {
   parser.end();
 });
 
+export const stringifyWord = word => isArray(word) ? word.join('|') : word;
+
 /**
  * 
  * @param {Array} words
@@ -56,7 +59,7 @@ const getWordsFromCSVContent = CSVContent => new Promise((resolve, reject) => {
  */
 export const saveWords = (words, filePath) => {
   const stringContent = words.reduce(
-    (content, { foreign, ipa, native }) => content + [foreign, ipa, native].join(',') + '\n',
+    (content, { foreign, ipa, native }) => content + [stringifyWord(foreign), ipa, stringifyWord(native)].join(',') + '\n',
     '',
   );
 
