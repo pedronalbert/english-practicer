@@ -50,7 +50,7 @@ const printWrongWords = words => {
   words.forEach(printFullWord);
 };
 
-const endMenu = ({ hasWrongWords }) => new Promise((resolve) => {
+const endMenu = ({ hasWrongWords, isForgotten }) => new Promise((resolve) => {
   inquirer.prompt([
     {
       name: 'answer',
@@ -60,7 +60,7 @@ const endMenu = ({ hasWrongWords }) => new Promise((resolve) => {
         REPEAT_CURRENT_TEST,
         REPEAT_WHOLE_TEST,
         CHANGE_TEST_MODE,
-        hasWrongWords && SAVE_TO_REPO,
+        (hasWrongWords && !isForgotten) && SAVE_TO_REPO,
         MAIN_MENU,
       ])
     }
@@ -77,7 +77,7 @@ const getCurrentState = () => {
 
   return {
     mode,
-    repo: state.repo,
+    repo: state.repo ? { ...state.repo, isForgotten: state.repo.name.includes('(olvidadas)') } : null,
     words: state.words,
     hasNext: state.currentWordIndex < (state.selectedWords.length - 1),
     currentWordIndex: state.currentWordIndex,
@@ -165,7 +165,10 @@ const renderEnding = () => {
     total: selectedWords.length
   });
 
-  endMenu({ hasWrongWords: wrongWords.length > 0 })
+  endMenu({
+    hasWrongWords: wrongWords.length > 0,
+    isForgotten: repo.isForgotten,
+  })
     .then(answer => {
       switch (answer) {
         case REPEAT_WRONG_WORDS:
