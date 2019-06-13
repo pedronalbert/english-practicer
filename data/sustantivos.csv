@@ -12,7 +12,6 @@ escort,esˈkɔːrt,escolta
 hue,/hjuː/,matíz
 desire,/dɪˈzaɪr/,deseo
 boyhood,/ˈbɔɪ.hʊd/,niñez
-hut,/hʌt/,choza
 foal,/foʊl/,potro
 pond,/pɑːnd/,estanque
 bribe,/braɪb/,soborno
@@ -41,7 +40,6 @@ sink,/sɪŋk/,lavamanos|lavabo
 trickle,/ˈtrɪk.əl/,chorrito
 cocoon,/kəˈkuːn/,capullo
 velvet,/ˈvel.vɪt/,terciopelo
-splotch,/splɑːtʃ/,mancha
 embrace,/ɪmˈbreɪs/,abrazo
 gnat,/næt/,mosquito
 groan|moan,/ɡroʊn/|/mon/,gemido
@@ -50,7 +48,6 @@ shudder,/ˈʃʌd.ɚ/,estremecimiento
 stab,/stæb/,puñalada
 mist,/mɪst/,niebla
 gut,/ɡʌt/,intestino
-flicker,/ˈflɪk.ɚ/,parpadeo
 ivy,/ˈaɪ.vi/,hiedra
 jaw,/dʒɑː/,mandíbula
 grunt|snarl|growl,/ɡrʌnt/|/snɑːrl/|/ɡraʊl/,gruñido
@@ -90,7 +87,7 @@ corpse,/kɔːrps/,cadaver
 loophole,/ˈluːp.hoʊl/,escapatoria
 belly,/ˈbel.i/,vientre
 brow,/braʊ/,ceja
-bother,/ˈbɑː.ðɚ/,molestia
+bother|hassle,/ˈbɑː.ðɚ/|/ˈhasol/,molestia
 slit,/slɪt/,abertura
 venison,/ˈven.ə.sən/,venado
 snare,/sner/,trampa
@@ -102,7 +99,6 @@ saddle,/ˈsæd.əl/,silla de montar
 rift,/rɪft/,grieta
 sake,/seɪk/,motivo
 tang,/tæŋ/,sabor
-jolt,/dʒoʊlt/,sacudida
 limb,/lɪm/,miembro
 sentry,/ˈsen.tri/,centinela
 estate,/ɪˈsteɪt/,inmueble
@@ -110,7 +106,7 @@ wisdom,/ˈwɪz.dəm/,sabiduría
 trouble,/ˈtrʌb.əl/,problema
 sting,/stɪŋ/,picadura
 dirt,/dɝːt/,suciedad
-stain,/steɪn/,mancha
+stain|splotch,/steɪn/|/splɑːtʃ/,mancha
 scar,/skɑːr/,cicatriz
 retching,/retʃin/,nausea
 marble,/ˈmɑːr.bəl/,mármol
@@ -127,7 +123,6 @@ whore,/hɔːr/,prostituta|puta
 mob,/mɑːb/,multitud
 bound,/baʊnd/,límite
 errand,/ˈer.ənd/,recado
-hassle,/ˈhasol/,molestia
 praise,/preɪz/,alabanza
 wheat,/wiːt/,trigo
 harm,/hɑːrm/,daño
@@ -188,7 +183,7 @@ flood,/flʌd/,inundación
 downpour,/ˈdaʊn.pɔːr/,aguacero
 cupboard,/ˈkʌb·ərd/,alacena|armario
 jab,/dʒæb/,pinchazo|golpe
-jerk,/dʒɜrk/,sacudida
+jerk|jolt,/dʒɜrk/|/dʒoʊlt/,sacudida
 whine,/hwɑɪn/,quejido
 snigger|giggle,/ˈsnɪɡ·ər/|/ˈɡɪɡ.əl/,risa pequeña|risilla|risita
 punish,/ˈpʌn·ɪʃ/,castigo
@@ -205,10 +200,145 @@ rag,/ræɡ/,trapo
 crutch,/krʌtʃ/,muleta
 gulp,/ɡʌlp/,trago|sorbo
 sag,/sæɡ/,hundimiento
-grate,/ɡreit/,rajilla|parrilla
+grate,/ɡreit/,rejilla|parrilla
 beetle,/ˈbi·t̬əl/,escarabajo
-shack,/ʃæk/,choza
+shack|hut,/ʃæk//hʌt/|,choza
 damp,/dæmp/,humedad
 plow,/plaʊ/,arado
 doormat,/ˈdɔːr.mæt/,felpudo
 shelf,/ʃelf/,estante
+bond,/bɑnd/,vínculo
+symptom,/ˈsɪmp·təm/,síntoma
+match,/mӕtʃ/,partido|encuentro|encuentro|juego|combinación|igual
+harvest,/ˈhɑr·vəst/,cosecha
+crab,/kræb/,cangrejo
+parade,/pəˈreɪd/,desfile
+stream,/strim/,arroyo|riachuelo|un flujo de algo
+belief,/bɪˈlif/,creencia
+deer,/dɪər/,ciervo
+plot,/plɑt/,argumento|trama
+trap,/træp/,trampa
+encouragement,/ɪnˈkɜr·ɪdʒ·mənt/,ánimo|apoyo
+lecture,/ˈlek·tʃər/,conferencia
+berry,/ˈber·i/,baya
+enthusiasm,/ɪnˈθu·ziˌæz·əm/,entusiasmo
+tremble,/ˈtrem·bəl/,temblor
+quarrel,/ˈkwɔːr.əl/,riña
+trunk,/trʌŋk/,tronco|maletero|trompa|bañador
+toenail,/ˈtoʊˌneɪl/,uña del pie
+venue,/ˈven·ju/,sala|local|recinto
+mint,/mɪnt/,hierbabuena|menta|caramelo de menta
+pension,/ˈpen·ʃən/,pensión
+verse,/vɜrs/,estrofa|verso
+pharmacist,/ˈfɑr·mə·sɪst/,farmacéutico
+jam,/dʒӕm/,mermelada|confitura
+clause,/kloːz/,proposición|cláusula
+gleam,/ɡliːm/,destello|brillo
+pitch,/pɪtʃ/,campo|terreno de juego|tono|resina
+cheat,/tʃiːt/,engañar|estafar|timar
+cardboard,/ˈkɑrdˌbɔrd/,cartón
+welfare,/ˈwel·feər/,bienestar|prestaciones sociales
+regard,/rɪˈɡɑrd/,estima|respeto|saludos
+pottery,/ˈpɑ·t̬ər·i/,alfarería
+sight,/sɑɪt/,vista|visión|imagen|escena
+outskirts,/ˈautskəːts/,afueras|alrededores
+colon,/ˈkoʊ·lən/,dos puntos
+neighbour,/ˈneɪ.bɚ/,vecino
+tomb,/tum/,tumba
+storey,/ˈstɔr·i/,planta|piso
+breed,/brid/,raza
+waist,/weɪst/,cintura|talle
+cast,/kæst/,reparto
+yawn,/jɔn/,bostezar
+mankind,/ˌmænˈkɑɪnd/,humanidad|género humano
+budget,/ˈbʌdʒ·ɪt/,presupuesto
+nuisance,/ˈnjuːsns/,molestia|fastidio
+burst,/bɜrst/,reventón|estallido
+tin,/tɪn/,lata|caja|lata|estaño
+booklet,/ˈbʊk·lɪt/,folleto
+terrace,/ˈter·əs/,terraza|patio
+eyelid,/ˈɑɪˌlɪd/,párpado
+scent,/sent/,aroma|perfume
+portrait,/ˈpɔr·trət/,retrato
+trial,/ˈtrɑɪ·əl/,proceso|juicio|prueba
+thirst,/θɜrst/,sed
+cruise,/kruz/,crucero
+gang,/ɡæŋ/,pandilla|banda
+trekking,/ˈtrek·ɪŋ/,senderismo|excursionismo
+temper,/ˈtem·pər/,genio
+eyesight,/ˈɑɪˌsɑɪt/,vista
+envy,/ˈen·vi/,envidia
+rage,/reɪdʒ/,rabia|ira
+beam,/bim/,rayo
+grip,/ɡrɪp/,sujeción|manera de agarrar
+tribe,/trɑɪb/,tribu
+loaf,/louvz/,pan|barra
+wand,/wɑːnd/,varita mágica
+vinegar,/ˈvɪn·ɪ·ɡər/,vinagre
+lid,/lid/,tapa|párpado
+pity,/ˈpiti/,lástima|pena|compasión
+despair,/dɪˈspeər/,desesperación
+pudding,/ˈpudiŋ/,budín|pudín|postre
+handout,/ˈhændˌɑʊt/,documento impreso|fotocopia(s)
+buzz,/bʌz/,zumbido
+dose,/doʊs/,dosis
+speech,/spitʃ/,habla|discurso
+oak,/oʊk/,roble
+dawn,/dɑn/,alba|amanecer
+strain,/streɪn/,tensión
+pile,/pɑɪl/,montón|pila
+crocodile,/ˈkrɑ·kəˌdɑɪl/,cocodrilo
+laundry,/ˈlɔn·dri/,ropa sucia|lavandería
+catering,/ˈkeɪ·t̬ər·ɪŋ/,restauración
+gum,/ɡʌm/,encía|chicle
+flame,/fleɪm/,llama
+trail,/treɪl/,rastro|sendero
+nursery,/ˈnɜr·sər·i/,guardería|cuarto del bebé|vivero
+tiredness,/ˈtɑɪərd·nəs/,cansancio
+pound,/paʊnd/,libra
+fellow,/ˈfeləu/,tipo|compañero|camarada|socio|miembro
+gossip,/ˈɡosip/,chismes|chismorreo|cotilleo|charla|conversación|chismoso|cotilla
+bumper,/ˈbʌm·pər/,parachoques
+estimate,/ˈes·tə·mət/,cálculo|presupuesto
+upbringing,/ˈʌpˌbrɪŋ·ɪŋ/,crianza
+proof,/pruf/,prueba
+sneeze,/sniz/,estornudo
+means,/minz/,medio|manera|medios
+charm,/tʃɑrm/,encanto|amuleto
+rebel,/ˈreb·əl/,rebelde
+tan,/tæn/,bronceado
+theft,/θeft/,robo
+bargain,/ˈbɑr·ɡən/,ganga
+hint,/hɪnt/,insinuación|consejo|indirecta
+mess,/mes/,desorden|desastre
+guilt,/ɡɪlt/,culpabilidad|culpa
+horn,/hɔrn/,pito|cuerno|trompa
+confidence,/ˈkɑn·fɪ·dəns/,seguridad|confianza
+pace,/peɪs/,paso|ritmo
+dare,/deər/,desafío|reto
+prawn,/prɔn/,gamba|langostino
+blink|flicker,/blɪŋk/|/ˈflɪk.ɚ/,parpadeo
+eyelash,/ˈɑɪˌlæʃ/,pestaña
+stool,/stul/,taburete
+tone,/toʊn/,tono|timbre
+courage,/ˈkɜr·ɪdʒ/,valentía
+delight,/diˈlait/,placer|gusto|alegría|deleite
+cheer,/tʃiə/,viva|hurra|ovación
+ward,/woːd/,sala|pupilo
+soil,/sɔɪl/,suelo|tierra
+choir,/kwɑɪər/,coro
+splash,/splӕʃ/,chapoteo|salpicadura|mancha
+ton,/tʌn/,tonelada
+tackle,/ˈtæk·əl/,abordar
+hyphen,/ˈhɑɪ·fən/,guión
+yacht,/jɑt/,yate
+slope,/sloʊp/,cuesta|pendiente
+rip,/rɪp/,rasgadura|desgarrón
+sweat,/swet/,sudor
+leaflet,/ˈlif·lɪt/,folleto|prospecto
+tray,/treɪ/,bandeja
+luxury,/ˈlʌk·ʃər·i/,lujo
+trick,/trɪk/,engaño|trampa|truco
+tide,/tɑɪd/,marea
+swan,/swɑn/,cisne
+matter,/ˈmæt̬·ər/,asunto|materia
