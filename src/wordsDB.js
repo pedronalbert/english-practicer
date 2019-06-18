@@ -13,20 +13,20 @@ export const getRepos = () => new Promise((resolve) => {
     resolve(files.map(
       file => ({
         name: capitalize(file.replace('.csv', '')),
-        file: path.join(REPOS_FOLDER, file) 
+        file: path.join(REPOS_FOLDER, file)
       }),
     ));
   });
 });
 
 /**
- * 
+ *
  * @param {String} path Path to file
  */
 const getCSVContent = path => fs.readFileSync(path).toString();
 
 /**
- * 
+ *
  * @param {Array} wordsArray Array of words from CSV content
  */
 const parseWordsArray = wordsArray => wordsArray.map(([foreign, ipa, native]) => ({
@@ -37,7 +37,7 @@ const parseWordsArray = wordsArray => wordsArray.map(([foreign, ipa, native]) =>
 
 
 /**
- * 
+ *
  * @param {String} CSVContent  CSV words content
  */
 const getWordsFromCSVContent = CSVContent => new Promise((resolve, reject) => {
@@ -53,7 +53,7 @@ const getWordsFromCSVContent = CSVContent => new Promise((resolve, reject) => {
 export const stringifyWord = word => isArray(word) ? word.join('|') : word;
 
 /**
- * 
+ *
  * @param {Array} words
  * @param {Strings} filePath
  */
@@ -63,11 +63,17 @@ export const saveWords = (words, filePath) => {
     '',
   );
 
-  fs.appendFile(filePath, stringContent, () => true);
+  fs.appendFile(
+    filePath,
+    stringContent,
+    err => {
+      if(err) console.log(err);
+    },
+  );
 };
 
 /**
- * 
+ *
  * @param {Object} repo
  * @param {String} repo.file
  */

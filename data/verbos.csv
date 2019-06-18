@@ -9,18 +9,15 @@ untangle,/ʌnˈtæŋ.ɡəl/,desenredar
 fade,/feɪd/,descolorarse
 witness,/ˈwɪt.nəs/,presenciar
 gnaw,/nɑː/,roer
-entomb,/ɪnˈtuːm/,enterrar
+bury|entomb,/ˈber·i/|/ɪnˈtuːm/,enterrar
 snuck,/snʌk/,escabullirse
 prick,/prɪk/,pinchar
-struggle,/ˈstrʌɡ.əl/,luchar
+wrestle|struggle,/ˈres.əl/|/ˈstrʌɡ.əl/,luchar
 sweep,/swiːp/,barrer
 engulf,/ɪnˈɡʌlf/,sumergir
 scoot,/skuːt/,largarse
 stumble,/ˈstʌm.bəl/,tropezar
 whisk,/wɪsk/,batir
-groan,/ɡroʊn/,gemir
-moan,/moʊn/,gemir
-fold,/foʊld/,doblar
 shudder,/ˈʃʌd.ɚ/,estremecerse
 squeeze,/skwiːz/,exprimir
 stagger,/ˈstæɡ.ɚ/,tambalear
@@ -32,14 +29,14 @@ rumble,/ˈrʌm.bəl/,retumbar
 sigh,/saɪ/,suspirar
 yell,/jel/,gritar
 surround,/səˈraʊnd/,rodear
-gather,/ˈɡæð.ɚ/,reunir
+gather,/ˈɡæð.ɚ/,reunir|recoger
 nudge,/nʌdʒ/,empujar
-swat,/swɑːt/,aplastar
+swat|smash,/swɑːt/|/smæʃ/,aplastar
 leap,/liːp/,saltar
 flinch,/flɪntʃ/,retroceder
 stomp,/stɑːmp/,pisar fuerte
 snatch,/snætʃ/,arrebatar
-wail,/weɪl/,gemir
+wail|groan|moan,/weɪl/|/ɡroʊn/|/moʊn/,gemir
 realize,/ˈriː.ə.laɪz/,darse cuenta
 limp,/lɪmp/,cojear
 shred,/ʃred/,desgarrar
@@ -49,25 +46,20 @@ gape,/ɡeɪp/,mirar boquiabierto
 conceal,/kənˈsiːl/,encubrir
 savor,/ˈseɪ·vər/,saborear
 clench,/klentʃ/,apretar
-resort,/rɪˈzɔːrt/,recurrir
-grovel,/ˈɡrɑː.vəl/,arrastrarse
 linger,/ˈlɪŋ.ɡɚ/,persistir
 gut,/ɡʌt/,destripar
 tilt,/tɪlt/,inclinar
 subside,/səbˈsaɪd/,disminuir
 beg,/beɡ/,mendigar
-bent,/bent/,doblar
+bent|fold,/bent/|/foʊld/,doblar
 sink,/sɪŋk/,hundir
 endow,/ɪnˈdaʊ/,dotar
 behave,/bɪˈheɪv/,comportarse
 spit,/spɪt/,escupir
-itch,/ɪtʃ/,picar (comezón)
 bloat,/bloʊt/,inflar
 brawl,/brɑːl/,pelearse
 banter,/ˈbæn.t̬ɚ/,bromear
 wield,/wiːld/,empuñar
-smash,/smæʃ/,aplastar
-haggle,/ˈhæɡ.əl/,regatear
 shirk,/ʃɝːk/,eludir
 forsake,/fɔːrˈseɪk/,abandonar
 hum,/hʌm/,tararear
@@ -85,8 +77,7 @@ bark,/bɑrk/,ladrar
 screech,/skritʃ/,chirriar|chillar
 tangle,/ˈtæŋ·ɡəl/,enredar
 swallow,/ˈswɑ·loʊ/,tragar
-nod,/nɑd/,asentor con la cabeza|inclinación de cabeza
-bow,/bɑʊ/,reverencia
+nod,/nɑd/,asentir
 blush,/blʌʃ/,ruborizarse
 amuse,/əˈmjuz/,divertir|hacer reír
 wax,/wæks/,encerar
@@ -97,41 +88,36 @@ shiver,/ˈʃɪv.ɚr/,temblar|temblar de frío
 damp,/dæmp/,humedecer
 snivel,/ˈsnɪv.əl/,lloriquear
 plow,/plaʊ/,arar
-wrestle,/ˈres.əl/,luchar
 wander,/ˈwɑn·dər/,vagar
 involve,/ɪnˈvɑlv/,implicar|conllevar|involucrar|involucrar
 estimate,/ˈes·təˌmeɪt/,estimar|calcular
 melt,/melt/,derretir
 untie,/ʌnˈtɑɪ/,desatar
-stare,/ster/,mirar fijamente
 chew,/tʃu/,masticar|mascar
 tend,/tend/,tender|tener tendencia|tener tendencia
-encounter,/ɪnˈkɑʊn·t̬ər/,toparse con
+encounter,/ɪnˈkɑʊn·t̬ər/,encontrar
 envy,/ˈen·vi/,envidiar
 tempt,/tempt/,tentar
-endure,/inˈdjuə/,soportar|aguantar|soportar|resistir|persistir
-settle,/ˈset̬·əl/,resolver|afincarse|instalarse|decidir|acomodarse|pagar un recibo
+endure,/ɪnˈdʊər/,aguantar|soportar
+settle,/ˈset̬·əl/,resolver|establecerse
 disguise,/disˈɡaiz/,disfrazar(se)|disimular|disfrazar
 chop,/tʃɑp/,picar|cortar|cortar en trocitos
 dip,/dɪp/,mojar
 cope,/koʊp/,arreglárselas
 insist,/ɪnˈsɪst/,reiterar|insistir
-sweep,/swip/,barrer|arrastrar
-rid,/rid/,librar|deshacerse de algo
+rid,/rid/,eliminar|librar|deshacerse
 compose,/kəmˈpəuz/,componer
-swallow,/ˈswɑ·loʊ/,tragar
 obey,/oʊˈbeɪ/,obedecer
 lick,/lɪk/,lamer
-drown,/draun/,ahogar|apagar|ahogar|cubrir
+drown,/draun/,ahogar|ahogarse
 owe,/oʊ/,deber
 decay,/dɪˈkeɪ/,descomponerse|pudrirse
 regain,/rɪˈɡeɪn/,recuperar
 cheat,/tʃiːt/,engañar|estafar|timar
 invest,/ɪnˈvest/,invertir
-splash,/splӕʃ/,salpicar|esparcirse|chapotear|exponer
+splash,/splӕʃ/,salpicar|chapotear
 rip,/rɪp/,rasgar|desgarrar
 yawn,/jɔn/,bostezar
-bury,/ˈber·i/,enterrar
 temper,/ˈtem·pər/,templar|suavizar
 frighten,/ˈfrɑɪ·t̬ən/,asustar
 hesitate,/ˈhez·ɪˌteɪt/,vacilar|titubear
@@ -139,40 +125,34 @@ cease,/sis/,cesar|suspender
 hint,/hɪnt/,insinuar|aconsejar
 regard,/rɪˈɡɑrd/,considerar
 tremble,/ˈtrem·bəl/,temblar
-strain,/streɪn/,esforzarse al máximo|lesionar
+strain,/streɪn/,esforzarse al máximo|lesionar|forzar
 boast,/boʊst/,alardear
 mutter,/ˈmʌt̬·ər/,murmurar|refunfuñar
-dig,/dɪɡ/,excavar|cavar
 pollute,/pəˈlut/,contaminar|contaminado
 trap,/træp/,coger|atrapar
 tan,/tæn/,broncearse
 loaf,/ləuf/,holgazanear
-fancy,/ˈfӕnsi/,capricho|antojo|fantasía|imaginación
-cheer,/tʃɪər/,gritar con entusiasmo|aclamar
+fancy,/ˈfӕnsi/,capricho|antojo|fantasía
+cheer,/tʃɪər/,animar|aclamar
 wipe,/wɑɪp/,limpiar|secar
-dare,/deər/,|atreverse a algo|desafiar a alguien a algo
 soak,/soʊk/,remojar|poner a remojo|empapar
 betray,/bɪˈtreɪ/,traicionar
 prompt,/prompt/,mover|incitar|provocar|apuntar
 mumble,/ˈmʌm·bəl/,hablar entre dientes|mascullar
 ensure,/ɪnˈʃʊər/,asegurar
 vary,/ˈveər·i/,variar
-gather,/ˈɡæð·ər/,reunirse|recoger|deducir
 devote,/dɪˈvoʊt/,dedicar
 sweat,/swet/,sudar
 reckon,/ˈrek·ən/,creer|pensar|estimar
 quarrel,/ˈkwɔːr.əl/,pelearse|discutir
 pour,/pɔr/,verter|servir
 blink,/blɪŋk/,parpadear
-rub,/rʌb/,frotar|restregar
 concern,/kənˈsɜrn/,preocupar|concernir
 dive,/daiv/,zambullirse|tirarse de cabeza|abalanzarse
 persuade,/pərˈsweɪd/,persuadir
-nod,/nɑd/,asentir con la cabeza|inclinación de cabeza
 steer,/stɪr/,dirigir
-bargain,/ˈbɑr·ɡən/,regatear
+haggle|bargain,/ˈhæɡ.əl/|/ˈbɑr·ɡən/,regatear
 parade,/pəˈreɪd/,desfilar
-gossip,/ˈɡosip/,chismorrear|cotillear|charlar|conversar
 sneeze,/sniz/,estornudar
 trick,/trɪk/,engañar|embaucar
 clause,/kloːz/,oración|(group of words)
@@ -184,7 +164,7 @@ resign,/rɪˈzɑɪn/,dimitir|renunciar
 slope,/sloʊp/,inclinarse
 pick,/pɪk/,escoger|coger|discutir
 trail,/treɪl/,arrastar
-itch,/ɪtʃ/,picar|picazón|comezón
+itch,/ɪtʃ/,picar|(comezón)
 glance,/ɡlæns/,echar un vistazo|vistazo
 inquire,/ɪnˈkwɑɪər/,hacer una consulta|preguntar
 deceive,/diˈsiːv/,engañar|defraudar|mentir

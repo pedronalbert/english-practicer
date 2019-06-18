@@ -31,7 +31,7 @@ const printProgress = ({ correct, wrong, current, total }) =>
 const printPreviousResult = ({ valid, word, answer }) => {
   if(valid) console.log(colors.green('Resputa Correcta! \n'));
   else console.log(colors.red(`Respuesta Incorrecta! [${answer || ''}]\n`));
- 
+
   printFullWord(word);
   console.log('\n');
 };
