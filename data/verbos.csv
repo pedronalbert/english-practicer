@@ -39,7 +39,6 @@ snatch,/snætʃ/,arrebatar
 wail|groan|moan,/weɪl/|/ɡroʊn/|/moʊn/,gemir
 realize,/ˈriː.ə.laɪz/,darse cuenta
 limp,/lɪmp/,cojear
-shred,/ʃred/,desgarrar
 beseech,/bɪˈsiːtʃ/,implorar
 cringe,/krɪndʒ/,encogerse
 gape,/ɡeɪp/,mirar boquiabierto
@@ -57,7 +56,6 @@ endow,/ɪnˈdaʊ/,dotar
 behave,/bɪˈheɪv/,comportarse
 spit,/spɪt/,escupir
 bloat,/bloʊt/,inflar
-brawl,/brɑːl/,pelearse
 banter,/ˈbæn.t̬ɚ/,bromear
 wield,/wiːld/,empuñar
 shirk,/ʃɝːk/,eludir
@@ -68,7 +66,7 @@ huddle,/ˈhʌd.əl/,acurrurcarse|amontonarse
 flood,/flʌd/,inundar
 gibber,/ˈdʒɪb.ɚ/,farfullar|hablar atropelladamente
 jab,/dʒæb/,pinchar|golpear
-jerk,/dʒɜrk/,sacudir
+jolt,/dʒəult/,traquetear|sacudir
 whine,/hwɑɪn/,quejarse
 crawl,/krɔl/,gatear|arrastrarse|avanzar lentamente
 snigger,/ˈsnɪɡ·ər/,reirse disimuladamente
@@ -116,7 +114,7 @@ regain,/rɪˈɡeɪn/,recuperar
 cheat,/tʃiːt/,engañar|estafar|timar
 invest,/ɪnˈvest/,invertir
 splash,/splӕʃ/,salpicar|chapotear
-rip,/rɪp/,rasgar|desgarrar
+shred|rip,/ʃred/|/rɪp/,desgarrar
 yawn,/jɔn/,bostezar
 temper,/ˈtem·pər/,templar|suavizar
 frighten,/ˈfrɑɪ·t̬ən/,asustar
@@ -143,9 +141,9 @@ ensure,/ɪnˈʃʊər/,asegurar
 vary,/ˈveər·i/,variar
 devote,/dɪˈvoʊt/,dedicar
 sweat,/swet/,sudar
-reckon,/ˈrek·ən/,creer|pensar|estimar
-quarrel,/ˈkwɔːr.əl/,pelearse|discutir
-pour,/pɔr/,verter|servir
+reckon,/ˈrek·ən/,contar|calcular|estimar
+quarrel|brawl,/ˈkwɔːr.əl/|/brɑːl/,pelearse|discutir
+spill,/spɪl/,derramar
 blink,/blɪŋk/,parpadear
 concern,/kənˈsɜrn/,preocupar|concernir
 dive,/daiv/,zambullirse|tirarse de cabeza|abalanzarse
