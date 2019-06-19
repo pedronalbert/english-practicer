@@ -57,7 +57,7 @@ export const stringifyWord = word => isArray(word) ? word.join('|') : word;
  * @param {Array} words
  * @param {Strings} filePath
  */
-export const saveWords = (words, filePath) => {
+export const saveWords = (words, filePath) => new Promise((resolve, reject) => {
   const stringContent = words.reduce(
     (content, { foreign, ipa, native }) => content + [stringifyWord(foreign), ipa, stringifyWord(native)].join(',') + '\n',
     '',
@@ -67,10 +67,17 @@ export const saveWords = (words, filePath) => {
     filePath,
     stringContent,
     err => {
-      if(err) console.log(err);
+      if(err) {
+        console.error(err);
+
+        reject(err);
+      } else {
+        console.log(`Words saved at ${filePath}`);
+        resolve();
+      }
     },
   );
-};
+});
 
 /**
  *

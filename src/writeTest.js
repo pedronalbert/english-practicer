@@ -44,7 +44,7 @@ const printFullWord = word => console.log(
   stringifyWord(word.native)
 );
 
-const printWrongWords = words => {
+const renderWrongWords = words => {
   console.log(`Lista de palabras incorrectas \n`);
 
   words.forEach(printFullWord);
@@ -138,7 +138,10 @@ const renderQuestion = () => new Promise((resolve) => {
   }
 });
 
-const renderEnding = () => {
+const renderEnding = ({
+  printWrongWords = true,
+  wordsAlreadySaved = false,
+} = {}) => {
   const {
     answers,
     words,
@@ -152,8 +155,8 @@ const renderEnding = () => {
   const wrongAnswers = answers.filter(({ valid }) => !valid);
   const wrongWords = wrongAnswers.map(({ word }) => word);
 
-  if(wrongAnswers.length) {
-    printWrongWords(wrongWords);
+  if(printWrongWords && wrongAnswers.length) {
+    renderWrongWords(wrongWords);
 
     console.log('\n Presiona cualquier tecla para continuar');
     scanf('%d')
@@ -166,7 +169,7 @@ const renderEnding = () => {
   });
 
   endMenu({
-    hasWrongWords: wrongWords.length > 0,
+    hasWrongWords: wrongWords.length > 0 && !wordsAlreadySaved,
     isForgotten: repo.isForgotten,
   })
     .then(answer => {
@@ -191,15 +194,16 @@ const renderEnding = () => {
               return renderQuestion()
             });
         case SAVE_TO_REPO:
-          saveToForgottenRepo({ words: wrongWords, repo });
-
-          return renderEnding();
+          return saveToForgottenRepo({ words: wrongWords, repo })
+            .then(() => renderEnding({ printWrongWords: false, wordsAlreadySaved: true }))
+            .catch(renderEnding);
         case MAIN_MENU:
           return mainMenu()
         default:
           resolve();
       }
     });
+
 };
 
 export default (selectedWords, mode, words, repo) => {

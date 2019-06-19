@@ -39,6 +39,4 @@ export const submitAnswer = createAction(
 
 export const nextWord = createAction(NEXT_WORD);
 
-export const saveToForgottenRepo = ({ words, repo }) => {
-  wordsDB.saveWords(words, repo.file.replace('.csv', ' (olvidadas).csv'));
-};
+export const saveToForgottenRepo = ({ words, repo }) => wordsDB.saveWords(words, repo.file.replace('.csv', ' (olvidadas).csv'));
