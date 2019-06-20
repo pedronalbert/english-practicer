@@ -19,8 +19,6 @@ scrap,/skræp/,chatarra
 rubbish,/ˈrʌb.ɪʃ/,basura
 sod,/sɑːd/,césped
 shrine,/ʃrɑɪn/,santuario
-wart,/wɔrt/,verruga
-mange,/meɪndʒ/,sarna
 fang,/fæŋ/,colmillo
 rib,/rɪb/,costilla
 mud,/mʌd/,barro
@@ -90,7 +88,6 @@ brow,/braʊ/,ceja
 bother|hassle,/ˈbɑː.ðɚ/|/ˈhasol/,molestia
 slit,/slɪt/,abertura
 venison,/ˈven.ə.sən/,venado
-snare,/sner/,trampa
 bruise,/bruːz/,moretón
 poverty,/ˈpɑː.vɚ.r̬i/,pobreza
 uprising,/ˈʌpˌraɪ.zɪŋ/,levantamiento
@@ -128,15 +125,12 @@ wheat,/wiːt/,trigo
 harm,/hɑːrm/,daño
 sewer,/ˈsuː.ɚ/,alcantarilla
 visage,/ˈvɪz.ɪdʒ/,rostro
-grievance|complaint,/ˈɡriː.vəns/|/kəmˈpleɪnt/,queja
 recruit,/rɪˈkruːt/,recluta
 lure,/lʊr/,señuelo
-stench,/stentʃ/,hedor
 heap,/hiːp/,montón
 lice,/laɪs/,piojos
 gristle,/ˈɡrɪs.əl/,cartílago
 barn,/bɑːrn/,granero
-seal,/siːl/,sello
 gloom,/ɡluːm/,penumbra
 swamp|bog,/swɑːmp/|/boːɡ/,pantano
 chaff,/tʃæf/,paja
@@ -320,7 +314,6 @@ courage,/ˈkɜr·ɪdʒ/,valentía
 delight,/diˈlait/,placer|gusto|alegría|deleite
 cheer,/tʃɪər/,hurra|aclamar|ovación
 ward,/wɔrd/,sala
-soil,/sɔɪl/,suelo|tierra
 choir,/kwɑɪər/,coro
 splash,/splӕʃ/,chapoteo|salpicadura|mancha
 ton,/tʌn/,tonelada
@@ -345,7 +338,6 @@ curse,/kɜrs/,maldición
 stable,/ˈsteɪ·bəl/,estable|establo
 bedchamber,/ˈbɛdˌtʃeɪm bər/,dormitorio|recámara
 miscarry,/mɪsˈkær i/,aborto
-threshold,/ˈθreʃəuld/,umbral|puertas|umbral
 scorn,/skɔrn/,desprecio
 peasant,/ˈpez·ənt/,campesino
 haunch,/hɑːntʃ/,pierna|anca
@@ -391,3 +383,12 @@ broth,/brɑːθ/,caldo
 bout,/baʊt/,combate
 hermit,/ˈhɜr·mɪt/,ermitaño
 remorse,/rɪˈmɔrs/,remordimiento
+grunt|snarl|growl,/ɡrʌnt/|/snɑːrl/|/ɡraʊl/,gruñido
+snare,/sner/,trampa
+soil,/sɔɪl/,suelo|tierra
+threshold,/ˈθreʃəuld/,umbral|puertas|umbral
+grievance|complaint,/ˈɡriː.vəns/|/kəmˈpleɪnt/,queja
+wart,/wɔrt/,verruga
+mange,/meɪndʒ/,sarna
+stench,/stentʃ/,hedor
+seal,/siːl/,sello

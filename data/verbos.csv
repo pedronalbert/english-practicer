@@ -1,7 +1,6 @@
 afford,/əˈfôrd/,permitirse
 flog,/flɑːɡ,azotar
 dig,/dɪɡ/,cavar
-grovel,/ˈɡrɑː.vəl/,arrastrar
 vanish,/ˈvæn.ɪʃ/,desvanecerse
 deserve,/dɪˈzɝːv/,merecer
 flunk,/flʌŋk/,suspender
@@ -35,17 +34,14 @@ swat|smash,/swɑːt/|/smæʃ/,aplastar
 leap,/liːp/,saltar
 flinch,/flɪntʃ/,retroceder
 stomp,/stɑːmp/,pisar fuerte
-snatch,/snætʃ/,arrebatar
 wail|groan|moan,/weɪl/|/ɡroʊn/|/moʊn/,gemir
 realize,/ˈriː.ə.laɪz/,darse cuenta
 limp,/lɪmp/,cojear
 beseech,/bɪˈsiːtʃ/,implorar
-cringe,/krɪndʒ/,encogerse
 gape,/ɡeɪp/,mirar boquiabierto
 conceal,/kənˈsiːl/,encubrir
 savor,/ˈseɪ·vər/,saborear
 clench,/klentʃ/,apretar
-linger,/ˈlɪŋ.ɡɚ/,persistir
 gut,/ɡʌt/,destripar
 tilt,/tɪlt/,inclinar
 subside,/səbˈsaɪd/,disminuir
@@ -55,7 +51,6 @@ sink,/sɪŋk/,hundir
 endow,/ɪnˈdaʊ/,dotar
 behave,/bɪˈheɪv/,comportarse
 spit,/spɪt/,escupir
-bloat,/bloʊt/,inflar
 wield,/wiːld/,empuñar
 shirk,/ʃɝːk/,eludir
 forsake,/fɔːrˈseɪk/,abandonar
@@ -94,7 +89,6 @@ chew,/tʃu/,masticar|mascar
 tend,/tend/,tender|tener tendencia|tener tendencia
 encounter,/ɪnˈkɑʊn·t̬ər/,encontrar
 envy,/ˈen·vi/,envidiar
-tempt,/tempt/,tentar
 endure,/ɪnˈdʊər/,aguantar|soportar
 settle,/ˈset̬·əl/,resolver|establecerse
 disguise,/disˈɡaiz/,disfrazar(se)|disimular|disfrazar
@@ -109,22 +103,17 @@ lick,/lɪk/,lamer
 drown,/draun/,ahogar|ahogarse
 owe,/oʊ/,deber
 decay,/dɪˈkeɪ/,descomponerse|pudrirse
-regain,/rɪˈɡeɪn/,recuperar
 invest,/ɪnˈvest/,invertir
 splash,/splӕʃ/,salpicar|chapotear
 shred|rip,/ʃred/|/rɪp/,desgarrar
 yawn,/jɔn/,bostezar
 temper,/ˈtem·pər/,templar|suavizar
-hesitate,/ˈhez·ɪˌteɪt/,vacilar|titubear
 cease,/sis/,cesar|suspender
 hint,/hɪnt/,insinuar|aconsejar
 regard,/rɪˈɡɑrd/,considerar
 tremble,/ˈtrem·bəl/,temblar
 strain,/streɪn/,esforzarse al máximo|lesionar|forzar
-boast,/boʊst/,alardear
-mutter,/ˈmʌt̬·ər/,murmurar|refunfuñar
 pollute,/pəˈlut/,contaminar|contaminado
-trap,/træp/,coger|atrapar
 tan,/tæn/,broncearse
 loaf,/ləuf/,holgazanear
 fancy,/ˈfӕnsi/,capricho|antojo|fantasía
@@ -154,9 +143,7 @@ harvest,/ˈhɑr·vəst/,cosechar
 burst,/bɜrst/,reventar|estallar
 delight,/diˈlait/,deleitar|encantar|dar gusto
 resign,/rɪˈzɑɪn/,dimitir|renunciar
-slope,/sloʊp/,inclinarse
 pick,/pɪk/,escoger|coger|discutir
-trail,/treɪl/,arrastrar
 itch,/ɪtʃ/,picar|(comezón)
 glance,/ɡlæns/,echar un vistazo|mirar
 inquire,/ɪnˈkwɑɪər/,hacer una consulta|preguntar
@@ -184,3 +171,16 @@ sow,/soʊ/,sembrar
 pitch,/pɪtʃ/,plantar|armar|montar
 toss,/tɔs/,lanzar|tirar
 braid,/breɪd/,trenzar
+hesitate,/ˈhez·ɪˌteɪt/,vacilar|titubear
+concern,/kənˈsɜrn/,preocupar|concernir
+regain,/rɪˈɡeɪn/,recuperar
+snatch,/snætʃ/,arrebatar
+boast,/boʊst/,alardear
+trap,/træp/,coger|atrapar
+grovel|trail,/ˈɡrɑː.vəl/|/treɪl/,arrastrar
+bloat,/bloʊt/,inflar
+tempt,/tempt/,tentar
+mutter,/ˈmʌt̬·ər/,murmurar|refunfuñar
+slope,/sloʊp/,inclinarse
+linger,/ˈlɪŋ.ɡɚ/,persistir
+cringe,/krɪndʒ/,encogerse
