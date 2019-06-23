@@ -22,7 +22,6 @@ shrine,/ʃrɑɪn/,santuario
 fang,/fæŋ/,colmillo
 rib,/rɪb/,costilla
 mud,/mʌd/,barro
-gut,/ɡʌt/,intestino
 sprain,/spreɪn/,esguince
 rash,/ræʃ/,sarpullido
 hike,/haɪk/,caminata
@@ -48,7 +47,6 @@ mist,/mɪst/,niebla
 gut,/ɡʌt/,intestino
 ivy,/ˈaɪ.vi/,hiedra
 jaw,/dʒɑː/,mandíbula
-grunt|snarl|growl,/ɡrʌnt/|/snɑːrl/|/ɡraʊl/,gruñido
 creak,/kriːk/,crujido
 scratch,/skrætʃ/,rasguño
 gaze,/ɡeɪz/,mirada
@@ -73,7 +71,6 @@ shriek,/ʃriːk/,grito|chillido
 hound,/haʊnd/,sabueso
 shoulder,/ˈʃoʊl.dɚ/,hombro
 sob,/sɑːb/,sollozo
-grip,/ɡrɪp/,apretón
 cottage,/ˈkɑː.t̬ɪdʒ/,cabaña
 snout,/snaʊt/,hocico
 wrath,/rɑːθ/,ira
@@ -145,7 +142,6 @@ revenue,/ˈrev.ə.nuː/,ingresos
 significance,/sɪɡˈnɪf.ə.kəns/,significado
 assumption,/əˈsʌmp.ʃən/,suposición
 injury,/ˈɪn.dʒər.i/,lesión
-affair,/əˈfeər/,asunto
 cheek,/tʃiːk/,mejilla
 youth,/juːθ/,juventud
 chance,/tʃæns/,oportunidad|ocasión
@@ -209,7 +205,6 @@ stream,/strim/,arroyo|riachuelo|un flujo de algo
 belief,/bɪˈlif/,creencia
 deer,/dɪər/,ciervo
 plot,/plɑt/,argumento|trama
-trap,/træp/,trampa
 encouragement,/ɪnˈkɜr·ɪdʒ·mənt/,ánimo|apoyo
 lecture,/ˈlek·tʃər/,conferencia
 berry,/ˈber·i/,baya
@@ -327,7 +322,7 @@ luxury,/ˈlʌk·ʃər·i/,lujo
 trick,/trɪk/,engaño|trampa|truco
 tide,/tɑɪd/,marea
 swan,/swɑn/,cisne
-matter,/ˈmæt̬·ər/,asunto|materia
+matter|affair,/ˈmæt̬·ər/|/əˈfeər/,asunto
 stem,/stem/,vástago|tallo|tronco
 torture,/ˈtɔr·tʃər/,tortura
 charm,/tʃɑrm/,encanto|amuleto|hechizo
@@ -383,7 +378,7 @@ bout,/baʊt/,combate
 hermit,/ˈhɜr·mɪt/,ermitaño
 remorse,/rɪˈmɔrs/,remordimiento
 grunt|snarl|growl,/ɡrʌnt/|/snɑːrl/|/ɡraʊl/,gruñido
-snare,/sner/,trampa
+snare|trap,/sner/|/træp/,trampa
 soil,/sɔɪl/,suelo|tierra
 threshold,/ˈθreʃəuld/,umbral|puertas|umbral
 grievance|complaint,/ˈɡriː.vəns/|/kəmˈpleɪnt/,queja
@@ -418,3 +413,9 @@ gull,/ɡʌl/,gaviota
 whim,/wɪm/,capricho|antojo
 shove,/ʃʌv/,empujón
 lass,/læs/,muchacha|chica
+vase,/veɪs/,florero|jarrón
+huff,/hʌf/,rabieta
+harbour|harbor,/ˈhɑːr.bɚ/,puerto
+steed,/stiːd/,corcel
+heist,/haɪst/,atraco|golpe
+bleach,/blitʃ/,lejía
