@@ -1,6 +1,5 @@
 import compact from 'lodash/compact';
 import clear from 'clear';
-import scanf from 'scanf';
 import inquirer from 'inquirer';
 import colors from 'colors';
 
@@ -21,9 +20,15 @@ const MAIN_MENU = 'Ir al menu principal';
 const getQuestion = (word, mode) => word[mode === FOREIGN_TO_NATIVE ? 'foreign' : 'native'];
 
 const printQuestion = ({ question, ipa }) =>
-  console.log(`${stringifyWord(question) } ${colors.grey(ipa)}`)
+  console.log(`${stringifyWord(question) } ${colors.grey(ipa)}\n`)
 
-const getAnswer = () => scanf('%S');
+const getAnswer = () => new Promise((resolve) => {
+  inquirer.prompt([
+    {
+      name: 'respuesta',
+    }
+  ]).then(({ respuesta }) => resolve(respuesta));
+});
 
 const printProgress = ({ correct, wrong, current, total }) =>
   console.log(`Progreso: ${current}/${total}, Correctas: ${colors.green(correct)}, Incorrectas: ${colors.red(wrong)}\n`)
@@ -119,23 +124,25 @@ const renderQuestion = () => new Promise((resolve) => {
 
   printQuestion({ question: currentQuestion, ipa: mode === FOREIGN_TO_NATIVE ? currentWord.ipa : '' });
 
-  const answer = getAnswer();
+  getAnswer()
+    .then(answer => {
+      store.dispatch(submitAnswer({
+        word: currentWord,
+        answer,
+        mode,
+      }));
 
-  store.dispatch(submitAnswer({
-    word: currentWord,
-    answer,
-    mode,
-  }));
+      if(hasNext) {
+        store.dispatch(nextWord());
 
-  if(hasNext) {
-    store.dispatch(nextWord());
+        return renderQuestion();
+      } else {
+        clear();
 
-    return renderQuestion();
-  } else {
-    clear();
+        return renderEnding();
+      }
 
-    return renderEnding();
-  }
+    });
 });
 
 const renderEnding = ({
@@ -158,8 +165,7 @@ const renderEnding = ({
   if(printWrongWords && wrongAnswers.length) {
     renderWrongWords(wrongWords);
 
-    console.log('\n Presiona cualquier tecla para continuar');
-    scanf('%d')
+    console.log('\n');
   }
 
   printProgress({
