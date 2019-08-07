@@ -13,6 +13,8 @@ export const getValidAnswer = (word, mode) => word[mode === FOREIGN_TO_NATIVE ? 
 const validateAnswer = (word, answer, mode) => {
   const validAnswer = getValidAnswer(word, mode);
 
+  if(answer === 's') return true; // Skip question
+
   return isString(validAnswer) ?
     answer === validAnswer :
     validAnswer.some(cAnswer => cAnswer === answer);
