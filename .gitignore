@@ -1,3 +1,4 @@
 node_modules
 data/*(olvidadas)*.csv
 data/*(nuevas)*.csv
+data/*(nuevos)*.csv
